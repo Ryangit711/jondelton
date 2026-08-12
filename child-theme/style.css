@@ -1,0 +1,78 @@
+/*
+ * Theme Name:   Hello Elementor Child
+ * Theme URI:    https://jondelton.com
+ * Description:  Child theme for Jon D. Elton's personal site.
+ *               Parent: Hello Elementor. Adds a custom look while keeping
+ *               the site safe to update.
+ * Author:       Aman Kumar
+ * Version:      1.0.0
+ * Template:     hello-elementor
+ * Text Domain:  hello-elementor-child
+ */
+
+/* ---------- Base adjustments ---------- */
+:root {
+  --jd-navy: #1b3a5c;
+  --jd-gold: #c9a227;
+  --jd-cream: #faf6ee;
+}
+
+body {
+  background-color: var(--jd-cream);
+  color: #2b2b2b;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* ---------- Headings & links ---------- */
+h1, h2, h3, h4 {
+  color: var(--jd-navy);
+}
+
+a {
+  color: var(--jd-gold);
+}
+
+/* ---------- Header brand ---------- */
+.site-header .site-branding .site-title {
+  color: var(--jd-navy);
+}
+
+/* ---------- Newsletter area ---------- */
+.jd-newsletter {
+  background: var(--jd-navy);
+  color: #fff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.jd-newsletter input[type="email"] {
+  padding: .8rem 1rem;
+  border: none;
+  border-radius: 999px;
+  font-family: inherit;
+}
+
+.jd-newsletter .jd-btn {
+  background: var(--jd-gold);
+  color: var(--jd-navy);
+  font-weight: 700;
+  border: none;
+  border-radius: 999px;
+  padding: .8rem 1.5rem;
+  cursor: pointer;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: #10283f;
+  color: #a7b6c8;
+}
+
+/* ---------- Mobile nav cleanup ---------- */
+@media (max-width: 640px) {
+  .site-header .elementor-nav-menu,
+  .site-header .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

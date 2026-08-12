@@ -1,0 +1,10 @@
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+
+# Local server pid files
+*.pid
+
+# Temp
+/tmp/
