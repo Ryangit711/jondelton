@@ -1,0 +1,105 @@
+/*
+  Fresh site stylesheet – uses the same animated‑background colors we added earlier.
+*/
+:root {
+  --navy: #10283f;
+  --gold: #ffd700;
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ---------- Animated ambient background ---------- */
+.bg-anim {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.bg-anim .grad {
+  position: absolute;
+  inset: -20%;
+  background: linear-gradient(120deg,
+    #fff4e5 0%, #ffe8d0 25%, #ffdbba 50%, #ffd1a8 75%, #ffc8a0 100%);
+  background-size: 300% 300%;
+  animation: bgShift 26s ease-in-out infinite;
+}
+@keyframes bgShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* floating soft orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.5;
+  animation: orbFloat 18s ease-in-out infinite;
+}
+.orb.one   { width: 340px; height: 340px; top: 8%; left: -120px; background: rgba(251,188,55,0.35); }
+.orb.two   { width: 420px; height: 420px; bottom: -140px; right: -120px; background: rgba(239,83,80,0.30); animation-delay: -6s; }
+.orb.three { width: 260px; height: 260px; top: 55%; left: 55%; background: rgba(124,191,255,0.25); animation-delay: -12s; }
+@keyframes orbFloat {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(40px, -40px) scale(1.08); }
+  66% { transform: translate(-30px, 30px) scale(0.94); }
+}
+
+/* floating music notes */
+.note {
+  position: absolute;
+  font-size: 1.6rem;
+  color: rgba(255,215,0,0.30);
+  text-shadow: 0 0 6px rgba(255,215,0,0.5);
+  animation: noteRise 16s linear infinite;
+}
+.note.n1 { left: 6%; bottom: -5%; }
+.note.n2 { left: 20%; bottom: -8%; font-size: 2rem; animation-delay: -4s; animation-duration: 20s; }
+.note.n3 { left: 38%; bottom: -6%; font-size: 1.3rem; animation-delay: -8s; }
+.note.n4 { left: 58%; bottom: -9%; font-size: 1.9rem; animation-delay: -2s; animation-duration: 22s; }
+.note.n5 { left: 76%; bottom: -6%; font-size: 1.5rem; animation-delay: -11s; }
+.note.n6 { left: 90%; bottom: -7%; font-size: 2.2rem; animation-delay: -6s; animation-duration: 19s; }
+@keyframes noteRise {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+  8%   { opacity: 0.7; }
+  100% { transform: translateY(-115vh) rotate(24deg); opacity: 0; }
+}
+
+/* Base page styling */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Arial, sans-serif;
+  color: var(--navy);
+  background: transparent;
+  overflow-x: hidden;
+}
+section {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+h1, h2 {
+  margin: 0 0 1rem;
+}
+button, input[type="submit"] {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  padding: .6rem 1.2rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+input[type="email"] {
+  padding: .5rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 300px;
+  margin-right: .5rem;
+}
+/* Reduced‑motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  .bg-anim .grad, .orb, .note { animation: none; }
+}
