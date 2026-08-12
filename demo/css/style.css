@@ -362,7 +362,7 @@ a:hover { color: var(--gold); }
   position: absolute;
   inset: -20%;
   background: linear-gradient(120deg,
-    #eaf2fb 0%, #fdf6e3 25%, #e8f0f7 50%, #fdf3dd 75%, #eaf2fb 100%);
+    #fff4e5 0%, #ffe8d0 25%, #ffdbba 50%, #ffd1a8 75%, #ffc8a0 100%);
   background-size: 300% 300%;
   animation: bgShift 26s ease-in-out infinite;
 }
@@ -380,9 +380,9 @@ a:hover { color: var(--gold); }
   opacity: 0.5;
   animation: orbFloat 18s ease-in-out infinite;
 }
-.orb.one { width: 340px; height: 340px; top: 8%; left: -120px; background: rgba(201,162,39,0.35); }
-.orb.two { width: 420px; height: 420px; bottom: -140px; right: -120px; background: rgba(40,82,124,0.30); animation-delay: -6s; }
-.orb.three { width: 260px; height: 260px; top: 55%; left: 55%; background: rgba(120,160,210,0.25); animation-delay: -12s; }
+.orb.one { width: 340px; height: 340px; top: 8%; left: -120px; background: rgba(251,188,55,0.35); }
+.orb.two { width: 420px; height: 420px; bottom: -140px; right: -120px; background: rgba(239,83,80,0.30); animation-delay: -6s; }
+.orb.three { width: 260px; height: 260px; top: 55%; left: 55%; background: rgba(124,191,255,0.25); animation-delay: -12s; }
 @keyframes orbFloat {
   0%, 100% { transform: translate(0, 0) scale(1); }
   33% { transform: translate(40px, -40px) scale(1.08); }
@@ -393,7 +393,8 @@ a:hover { color: var(--gold); }
 .note {
   position: absolute;
   font-size: 1.6rem;
-  color: rgba(27, 58, 92, 0.16);
+  color: rgba(255,215,0,0.30);
+  text-shadow: 0 0 6px rgba(255,215,0,0.5);
   animation: noteRise 16s linear infinite;
 }
 .note.n1 { left: 6%; bottom: -5%; }
