@@ -516,7 +516,4 @@ body { background: transparent; }
   .bg-anim .grad, .orb, .note, .section-head h2::after { animation: none; }
   .reveal { transition: none; opacity: 1; transform: none; }
 }
-/* Header adjustments for search */
-.header-inner { justify-content: flex-start; }
-.main-nav { flex-grow: 1; }
-.search-box { margin-left: auto; padding: .4rem .6rem; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; color: #333; font-size: .9rem; }
+
