@@ -103,3 +103,10 @@ input[type="email"] {
 @media (prefers-reduced-motion: reduce) {
   .bg-anim .grad, .orb, .note { animation: none; }
 }
+
+/* Search box */
+.search-box { padding: .4rem .6rem; border: 1px solid var(--line); border-radius: var(--radius); margin-left: 1rem; }
+/* Header adjustments for search */
+.header-inner { justify-content: flex-start; }
+.main-nav { flex-grow: 1; }
+.search-box { margin-left: auto; padding: .4rem .6rem; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; color: #333; font-size: .9rem; }

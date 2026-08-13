@@ -49,8 +49,7 @@
     poster.addEventListener('click', function () {
       var wrap = document.getElementById('home-player');
       wrap.innerHTML =
-        '<div class="yt-embed"><iframe src="https://www.youtube-nocookie.com/embed/' + id +
-        '?rel=0&autoplay=1&modestbranding=1" title="Jon Elton — 2007 Africa Trip" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
+' <div class="yt-embed"><iframe src="https://www.youtube.com/embed/' + id + '?rel=0&autoplay=1&modestbranding=1&playsinline=1" title="Jon Elton — 2007 Africa Trip" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
     });
   }
 })();
