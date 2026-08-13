@@ -53,15 +53,30 @@ a:hover { color: var(--gold); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 0.9rem 1.3rem;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  padding: 0.9rem 1.3rem 0.5rem;
   max-width: 1080px;
   margin: 0 auto;
 }
+.brand { order: 0; margin-right: auto; }
 .brand a { color: #fff; text-decoration: none; }
 .brand h1 { font-size: 1.35rem; letter-spacing: 0.5px; }
 .brand h1 span { color: var(--gold); }
 .brand p { font-size: 0.8rem; color: #b8c8dc; font-style: italic; }
+
+.main-nav {
+  order: 4;
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.55rem;
+  margin-top: 0.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(16, 40, 63, 0.35);
+}
+.site-search { order: 2; }
+.nav-toggle { order: 3; }
 
 .nav-toggle {
   display: none;
@@ -79,6 +94,7 @@ a:hover { color: var(--gold); }
   display: flex;
   gap: 1.3rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .main-nav a {
   color: #e6edf6;
