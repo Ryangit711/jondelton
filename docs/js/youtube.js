@@ -25,7 +25,7 @@
   ];
 
   function thumb(id) { return 'https://img.youtube.com/vi/' + id + '/mqdefault.jpg'; }
-  function embedUrl(id) { return 'https://www.youtube.com/embed/' + id + '?rel=0&modestbranding=1&playsinline=1&enablejsapi=1'; }
+  function embedUrl(id) { return 'https://www.youtube.com/embed/' + id + '?rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=https://Ryangit711.github.io'; }
 
   var playerWrap = document.getElementById('yt-player');
   var videoGrid = document.getElementById('yt-grid');
