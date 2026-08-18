@@ -66,16 +66,14 @@
     return;
   }
 
-  // ---------------- Live in-page filter ----------------
-  input.addEventListener('input', function () {
-    var term = normalize(this.value);
-    var selectors = '.reveal, .gem, .yt-card, .card, .yt-poster';
-    document.querySelectorAll(selectors).forEach(function (el) {
-      if (term === '') { el.style.display = ''; return; }
-      var txt = normalize(el.textContent);
-      el.style.display = txt.indexOf(term) !== -1 ? '' : 'none';
+  // ---------------- Header search: always navigate to search page ----------------
+  var headerForm = document.querySelector('.site-search');
+  if (headerForm) {
+    headerForm.addEventListener('submit', function (e) {
+      var val = input.value.trim();
+      if (!val) { e.preventDefault(); input.focus(); return; }
     });
-  });
+  }
 
   // ---------------- Ranking ----------------
   function searchIndex(index, query) {

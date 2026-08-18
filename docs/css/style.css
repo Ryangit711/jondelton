@@ -551,6 +551,22 @@ body { background: transparent; }
 .search-box::placeholder { color: rgba(255,255,255,0.7); }
 .search-box:focus { background: #fff; color: var(--navy); border-color: var(--gold); }
 .search-box:focus::placeholder { color: #aaa; }
+.site-search { display: flex; align-items: center; gap: 0; }
+.search-btn {
+  background: rgba(255,255,255,0.18);
+  border: 1.5px solid rgba(255,255,255,0.35);
+  border-left: none;
+  border-radius: 0 999px 999px 0;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0.48rem 0.65rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: background 0.2s ease;
+}
+.search-btn:hover { background: rgba(255,255,255,0.3); }
+.search-btn:focus { outline: 2px solid var(--gold); outline-offset: -2px; }
+.search-box { border-radius: 999px 0 0 999px; }
 
 /* ---------- Search: accessible markup ---------- */
 .sr-only {
