@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jon's Gems — Jon D. Elton</title>
-<meta name="description" content="The entire compilation of Gems from Jon — Jon's monthly newsletter of poems, reflections, and musings.">
+<meta name="description" content="The entire compilation of Gems from Jon — Jon's monthly newsletter of poems, reflections, and musings. Browse and search every issue from 2015 to today.">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -66,53 +66,27 @@
     <div class="section-head reveal">
       <p class="kicker">The Monthly Letter</p>
       <h2>Gems from Jon</h2>
-      <p>Each month I share a letter of poems, personal reflections, and musings &mdash; little gems gathered through life. Sign up below to have them delivered to your inbox.</p>
+      <p>Each month I share a letter of poems, personal reflections, and musings &mdash; little gems gathered through life. Search below to find any issue, or browse the archive. Click any issue to read it in full.</p>
     </div>
 
-    <div class="section-head reveal">
-      <p class="kicker">Archive</p>
-      <h2>Recent Issues</h2>
+    <div id="gems-toolbar" class="gems-toolbar reveal">
+      <div class="gems-search-row">
+        <label class="sr-only" for="gems-search-input">Search all Gems</label>
+        <input type="search" id="gems-search-input" class="gems-search-input" placeholder="Search every Gem &hellip; e.g. Africa, love, wisdom, a joke, a quote">
+        <button type="button" class="gems-clear">Clear</button>
+      </div>
+      <p class="gems-meta" aria-live="polite"></p>
     </div>
 
-    <div class="gem-item reveal">
-      <span class="gem-month">August 2025</span>
-      <a class="gem-read" href="index.html">Read this gem &rarr;</a>
-    </div>
-    <div class="gem-item reveal">
-      <span class="gem-month">July 2025</span>
-      <a class="gem-read" href="index.html">Read this gem &rarr;</a>
-    </div>
-    <div class="gem-item reveal">
-      <span class="gem-month">June 2025</span>
-      <a class="gem-read" href="index.html">Read this gem &rarr;</a>
-    </div>
-    <div class="gem-item reveal">
-      <span class="gem-month">May 2025</span>
-      <a class="gem-read" href="index.html">Read this gem &rarr;</a>
-    </div>
-    <div class="gem-item reveal">
-      <span class="gem-month">April 2025</span>
-      <a class="gem-read" href="index.html">Read this gem &rarr;</a>
-    </div>
-    <div class="gem-item reveal">
-      <span class="gem-month">March 2025</span>
-      <a class="gem-read" href="index.html">Read this gem &rarr;</a>
-    </div>
-    <div class="gem-item reveal">
-      <span class="gem-month">February 2025</span>
-      <a class="gem-read" href="index.html">Read this gem &rarr;</a>
-    </div>
-    <div class="gem-item reveal">
-      <span class="gem-month">January 2025</span>
-      <a class="gem-read" href="index.html">Read this gem &rarr;</a>
-    </div>
-    <div class="gem-item reveal">
-      <span class="gem-month">December 2024</span>
-      <a class="gem-read" href="index.html">Read this gem &rarr;</a>
-    </div>
-    <div class="gem-item reveal">
-      <span class="gem-month">November 2024</span>
-      <a class="gem-read" href="index.html">Read this gem &rarr;</a>
+    <div id="gems-archive" class="gems-archive" aria-live="polite"></div>
+
+    <div id="gems-reader" class="gems-reader" style="display:none">
+      <button type="button" class="gems-reader-close">Close &times;</button>
+      <div class="gems-reader-head">
+        <h3 class="gems-reader-title"></h3>
+        <p class="gems-reader-label"></p>
+      </div>
+      <div class="gems-body"></div>
     </div>
   </div>
 </section>
@@ -171,6 +145,8 @@
   </div>
 </footer>
 
+<script src="js/gems-data.js"></script>
+<script src="js/gems.js"></script>
 <script src="js/main.js"></script>
 <script src="js/search.js"></script>
 </body>

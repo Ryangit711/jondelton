@@ -698,3 +698,127 @@ body { background: transparent; }
   font-family: var(--sans);
   text-align: center;
 }
+
+/* ============================================================
+   Jon's Gems — full archive + search + reader
+   ============================================================ */
+.gems-toolbar {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.4rem 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+.gems-search-row { display: flex; gap: 0.6rem; align-items: center; }
+.gems-search-input {
+  flex: 1;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 0.8rem 1.3rem;
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--cream);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.gems-search-input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,162,39,0.22); }
+.gems-clear {
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.8rem 1.3rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.gems-clear:hover { background: var(--navy-mid); }
+.gems-meta { font-family: var(--sans); font-size: 0.85rem; color: var(--muted); margin-top: 0.7rem; }
+
+.gems-archive { margin-top: 1.6rem; text-align: left; }
+.gems-year { margin-bottom: 1.9rem; }
+.gems-year-title {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+.gems-list { list-style: none; padding-left: 0; }
+.gems-list li {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(27,58,92,0.10);
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.95rem 1.3rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.gems-list li:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.gems-list .gem-label { font-weight: bold; color: var(--navy); }
+.gems-list .gem-note { display: block; font-size: 0.78rem; font-weight: normal; font-family: var(--sans); color: var(--muted); }
+.gems-read {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.55rem 1.15rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.gems-read:hover { background: var(--gold-bright); transform: translateY(-1px); }
+.gems-empty { text-align: center; color: var(--muted); padding: 2.4rem 1rem; font-family: var(--sans); }
+
+/* Reader view */
+.gems-reader {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 2.4rem 2.6rem;
+  margin-top: 2rem;
+  animation: gemsFade 0.3s ease;
+}
+@keyframes gemsFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.gems-reader-head { border-bottom: 2px solid var(--line); padding-bottom: 1.1rem; margin-bottom: 1.4rem; }
+.gems-reader-head h3 { color: var(--navy); font-size: 1.5rem; margin-bottom: 0.2rem; }
+.gems-reader-head p { font-family: var(--sans); color: var(--muted); font-size: 0.85rem; }
+.gems-reader-close {
+  background: none; border: 1.5px solid var(--line); color: var(--navy);
+  border-radius: 999px; font-family: var(--sans); font-weight: 700; font-size: 0.82rem;
+  padding: 0.45rem 1.1rem; cursor: pointer; float: right; margin-top: 0.25rem;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.gems-reader-close:hover { border-color: var(--gold); color: var(--gold); }
+.gems-reader-close::after { content: ''; display: block; clear: both; }
+.gems-body {
+  white-space: pre-wrap;
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #33302a;
+}
+.gems-body mark { background: #ffe9a8; color: var(--navy-deep); border-radius: 3px; padding: 0 2px; }
+.gems-body a { word-break: break-all; }
+
+@media (max-width: 640px) {
+  .gems-reader { padding: 1.5rem 1.3rem; }
+  .gems-list li { flex-direction: column; align-items: flex-start; }
+}
