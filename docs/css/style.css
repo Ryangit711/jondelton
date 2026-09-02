@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap');
 
 /* ============================================================
    Jon D. Elton — Personal Website Demo
@@ -877,17 +877,17 @@ body { background: transparent; }
 
 /* Script / cursive reader */
 .gems-reader.script { background: linear-gradient(180deg, #fffdf6 0%, #fff9ee 100%); }
-.gems-reader.script .gems-reader-head h3 { font-family: 'Dancing Script', cursive; font-size: 2.1rem; font-weight: 700; color: #8a5a2b; }
-.gems-reader.script .gems-reader-head p { font-family: 'Dancing Script', cursive; font-style: italic; font-size: 1.1rem; color: var(--gold); }
+.gems-reader.script .gems-reader-head h3 { font-family: 'Caveat', 'Segoe Script', cursive; font-weight: 700; font-size: 2.5rem; color: #8a5a2b; }
+.gems-reader.script .gems-reader-head p { font-family: 'Caveat', 'Segoe Script', cursive; font-weight: 600; font-size: 1.3rem; color: var(--gold); }
 .gems-reader.script .gems-body {
-  font-family: 'Dancing Script', 'Segoe Script', 'Brush Script MT', cursive;
-  font-size: 1.45rem;
-  line-height: 1.75;
-  color: #4a3a25;
+  font-family: 'Caveat', 'Segoe Script', 'Patrick Hand', cursive;
+  font-size: 1.7rem;
+  line-height: 1.6;
+  color: #3d3225;
 }
 .gems-reader.script .gems-body mark { background: rgba(201,162,39,0.18); color: #6b4a17; box-shadow: inset 0 -2px 0 rgba(201,162,39,0.4); }
 .gems-reader.script .gem-link-card { background: #fff9ec; border-color: #e8d9b4; }
 .gems-reader.script .gem-link-card .lk-title { color: #7a5227; }
 @media (max-width: 640px) {
-  .gems-reader.script .gems-body { font-size: 1.3rem; }
+  .gems-reader.script .gems-body { font-size: 1.5rem; }
 }
