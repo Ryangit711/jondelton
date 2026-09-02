@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap');
+
 /* ============================================================
    Jon D. Elton — Personal Website Demo
    Shared stylesheet (navy + gold, serif)
@@ -821,4 +823,71 @@ body { background: transparent; }
 @media (max-width: 640px) {
   .gems-reader { padding: 1.5rem 1.3rem; }
   .gems-list li { flex-direction: column; align-items: flex-start; }
+}
+
+/* ============================================================
+   Gems reader — rich link cards + script (cursive) style
+   ============================================================ */
+.gem-link-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin: 1.2rem 0;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.gem-link-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
+.gem-link-card .lk-thumb {
+  flex: 0 0 9.5rem;
+  height: 6.2rem;
+  background: var(--navy-deep);
+  position: relative;
+}
+.gem-link-card .lk-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gem-link-card .lk-body { padding: 0.8rem 1.1rem 0.9rem 0; min-width: 0; }
+.gem-link-card .lk-title {
+  font-family: var(--sans); font-weight: 700; font-size: 0.95rem;
+  color: var(--navy); line-height: 1.3; margin-bottom: 0.25rem;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.gem-link-card .lk-host {
+  font-family: var(--sans); font-size: 0.78rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.6px; font-weight: 600;
+}
+.gem-link-card .lk-play {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(201,162,39,0.95); color: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; padding-left: 3px; box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+.gem-link-card.no-thumb .lk-thumb { display: none; }
+.gem-link-card.no-thumb .lk-body { padding: 1rem 1.2rem; }
+@media (max-width: 520px) {
+  .gem-link-card { flex-direction: column; align-items: stretch; }
+  .gem-link-card .lk-thumb { flex: none; height: 7.5rem; }
+  .gem-link-card .lk-body { padding: 0.9rem 1.1rem 1rem; }
+}
+
+/* Script / cursive reader */
+.gems-reader.script { background: linear-gradient(180deg, #fffdf6 0%, #fff9ee 100%); }
+.gems-reader.script .gems-reader-head h3 { font-family: 'Dancing Script', cursive; font-size: 2.1rem; font-weight: 700; color: #8a5a2b; }
+.gems-reader.script .gems-reader-head p { font-family: 'Dancing Script', cursive; font-style: italic; font-size: 1.1rem; color: var(--gold); }
+.gems-reader.script .gems-body {
+  font-family: 'Dancing Script', 'Segoe Script', 'Brush Script MT', cursive;
+  font-size: 1.45rem;
+  line-height: 1.75;
+  color: #4a3a25;
+}
+.gems-reader.script .gems-body mark { background: rgba(201,162,39,0.18); color: #6b4a17; box-shadow: inset 0 -2px 0 rgba(201,162,39,0.4); }
+.gems-reader.script .gem-link-card { background: #fff9ec; border-color: #e8d9b4; }
+.gems-reader.script .gem-link-card .lk-title { color: #7a5227; }
+@media (max-width: 640px) {
+  .gems-reader.script .gems-body { font-size: 1.3rem; }
 }

@@ -99,6 +99,33 @@
     }
   }
 
+  // Convert bare URLs in an (already escaped) HTML string into rich link cards.
+  function linkify(html, links) {
+    var map = {};
+    (links || []).forEach(function (l) { map[String(l.url).toLowerCase()] = l; });
+    return html.replace(/(https?:\/\/[^\s<>"'\u2026]+)/gi, function (match) {
+      var found = map[match.toLowerCase()];
+      var href = found ? found.url : match;
+      var host = (function () {
+        try { return new URL(href).hostname.replace(/^www\./, ''); }
+        catch (e) { return ''; }
+      })();
+      if (found) {
+        var title = escapeHtml(found.title || found.url);
+        var thumb = found.thumb ? '<div class="lk-thumb"><img src="' + escapeHtml(found.thumb) +
+          '" alt="" loading="lazy"><span class="lk-play">&#9654;</span></div>' : '';
+        var cls = found.thumb ? 'gem-link-card' : 'gem-link-card no-thumb';
+        return '<a class="' + cls + '" href="' + escapeHtml(found.url) + '" target="_blank" rel="noopener">' +
+          thumb +
+          '<span class="lk-body"><span class="lk-title">' + title + '</span>' +
+          '<span class="lk-host">' + escapeHtml(host) + '</span></span></a>';
+      }
+      return '<span class="gem-link-card no-thumb"><a class="lk-body" href="' + match +
+        '" target="_blank" rel="noopener"><span class="lk-title">Open this link</span>' +
+        '<span class="lk-host">' + escapeHtml(host) + '</span></a></span>';
+    });
+  }
+
   function openReader(id) {
     var g = gems.find(function (x) { return x.id === id; });
     if (!g) return;
@@ -106,7 +133,13 @@
     if (readerLabelEl) readerLabelEl.textContent = g.label;
     if (readerBodyEl) {
       var terms = termsOf(inputEl.value);
-      readerBodyEl.innerHTML = highlight(g.body, terms);
+      var html = highlight(g.body, terms);
+      readerBodyEl.innerHTML = (g.links && g.links.length) ? linkify(html, g.links) : html;
+      if (g.style && g.style.indexOf('script') !== -1) {
+        readerEl.classList.add('script');
+      } else {
+        readerEl.classList.remove('script');
+      }
     }
     readerEl.style.display = 'block';
     readerEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
