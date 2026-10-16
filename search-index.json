@@ -48,7 +48,7 @@
       "rolfson",
       "smith"
     ],
-    "text": "The Elton Lake House at Sudden Valley, Lake Whatcom, Bellingham, Washington. Enjoy the waterfront of beautiful Lake Whatcom — waterski, swim, kayak, canoe, or just read a book. Located at #6 Inlet Circle, Bellingham, in Sudden Valley on Lake Whatcom. A 4,200 square foot home with 5 bedrooms and 4½ bathrooms, including a self-contained suite on the lowest level. It has been a great family reunion location for our family of 6 grown children, their spouses, and 15 grandchildren. Pretty tight when we are all there at the same time — but it's great having everyone under one roof. Kind words from our friends: the Walker Family, Cordell & Marilyn Rolfson, and Merlin & Maureen Smith."
+    "text": "The Elton Lake House at Sudden Valley, Lake Whatcom, Bellingham, Washington. Enjoy the waterfront of beautiful Lake Whatcom — waterski, swim, kayak, canoe, or just read a book. Located at #6 Inlet Circle, Bellingham, in Sudden Valley on Lake Whatcom. A 4,200 square foot home with 5 bedrooms and 4½ bathrooms, including a self-contained suite on the lowest level. It has been a great family reunion location for our family of 6 grown children, their spouses, and 15 grandchildren. Pretty tight when we are all there at the same time — but it's great having everyone under one roof. Kind words from our friends: the Walker Family, Cordell & Marilyn Rolfson, and Merlin & Maureen Smith. Lake Whatcom, Sudden Valley."
   },
   {
     "url": "poems.html",
@@ -966,5 +966,89 @@
       "gems"
     ],
     "text": "Family and friendship in Jon's Gems. Weddings, missionaries returning home, birthdays, lake summers, and the loved ones who shaped his letters — including his friend Drew. Browse the whole archive on the Gems page."
+  },
+  {
+    "url": "biography.html",
+    "title": "David Horton Elton Biography",
+    "category": "Biography",
+    "tags": ["david horton elton","grandpa","poet","lawyer","mayor","lake whatcom"],
+    "text": "Biography of David Horton Elton (1877–1963), poet, newspaper editor, lawyer, and Mayor of Lethbridge."
+  },
+  {
+    "url": "travel.html",
+    "title": "Travel Adventures",
+    "category": "Travel",
+    "tags": ["malaysia","borneo","thailand","travel","asia"],
+    "text": "Jon and Ron's Malaysia, Borneo, and Thailand adventure."
+  },
+  {
+    "url": "poems/live-all-your-life.html",
+    "title": "Live All Your Life",
+    "category": "Poems",
+    "tags": ["live","life","poem"],
+    "text": "Poem encouraging living fully."
+  },
+  {
+    "url": "poems/u-and-i.html",
+    "title": "U and I",
+    "category": "Poems",
+    "tags": ["u","i","poem"],
+    "text": "Poem about togetherness."
+  },
+  {
+    "url": "poems/son-of-mine.html",
+    "title": "Son of Mine",
+    "category": "Poems",
+    "tags": ["son","mine","poem"],
+    "text": "Poem reflecting on son."
+  },
+  {
+    "url": "poems/a-handclasp-a-smile-and-a-word.html",
+    "title": "A Handclasp — A Smile — And a Word",
+    "category": "Poems",
+    "tags": ["handclasp","smile","word","poem"],
+    "text": "Poem about simple gestures."
+  },
+  {
+    "url": "poems/jack-asses.html",
+    "title": "Jack Asses",
+    "category": "Poems",
+    "tags": ["jack","asses","poem"],
+    "text": "Poem with quirky title."
+  },
+  {
+    "url": "poems/chins-up.html",
+    "title": "Chins Up",
+    "category": "Poems",
+    "tags": ["chins","up","poem"],
+    "text": "Poem encouraging optimism."
+  },
+  {
+    "url": "poems/my-mother.html",
+    "title": "My Mother",
+    "category": "Poems",
+    "tags": ["mother","poem"],
+    "text": "Poem dedicated to mother."
+  },
+  {
+    "url": "poems/the-joys-of-married-life.html",
+    "title": "The Joys of Married Life",
+    "category": "Poems",
+    "tags": ["married","life","poem"],
+    "text": "Poem about marriage joys."
+  },
+  {
+    "url": "poems/regular-first-class-guy.html",
+    "title": "Regular First Class Guy",
+    "category": "Poems",
+    "tags": ["regular","first","class","guy","poem"],
+    "text": "Poem tribute to everyday man."
+  },
+  {
+    "url": "poems/our-mother.html",
+    "title": "Our Mother",
+    "category": "Poems",
+    "tags": ["our","mother","poem"],
+    "text": "Poem honoring mother figure."
   }
 ]
